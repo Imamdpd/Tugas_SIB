@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pegawai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Data Pegawai</h2>
+        <table class="table table-bordered text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nama Pegawai</th>
+                    <th>Umur</th>
+                    <th>Jabatan</th>
+                    <th>Status</th>
+                    <th>Gaji Pokok</th>
+                    <th>Tunjangan Jabatan</th>
+                    <th>BPJS</th>
+                    <th>Tunjangan Keluarga</th>
+                    <th>Total Gaji</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script>
+                    // seting variable
+                    let nama = "Dodi Prayodi";
+                    let umur = 25;
+                    let jabatan = "Manajer";
+                    let status = "Menikah";
+                    let gajiPokok =0;
+                    switch(jabatan){
+                        case "Manajer" : gajiPokok = 15000000; break;
+                        case "Asistan Manajer" : gajiPokok = 10000000; break;
+                        case "Staff" : gajiPokok = 5000000; break;
+                        default : gajiPokok = 0;
+                    }
+                    let tunjanganJabatan = 0.15 * gajiPokok;
+                    let bpjs = 0.10 * gajiPokok;
+                    let tunjanganKeluarga = status === "Menikah" ? 0.20 * gajiPokok : 0;  
+                    let totalGaji = gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+                    // Menampilkan di Console
+                    console.log("Nama Pegawai:", nama);
+                    console.log("Umur:", umur);
+                    console.log("Jabatan:", jabatan);
+                    console.log("Status:", status);
+                    console.log("Gaji Pokok:", gajiPokok);
+                    console.log("Tunjangan Jabatan:", tunjanganJabatan);
+                    console.log("BPJS:", bpjs);
+                    console.log("Tunjangan Keluarga:", tunjanganKeluarga);
+                    console.log("Total Gaji:", totalGaji);
+
+                    // Menampilkan di HTML
+                    document.write("<tr>");
+                    document.write("<td>" + nama + "</td>");
+                    document.write("<td>" + umur + "</td>");
+                    document.write("<td>" + jabatan + "</td>");
+                    document.write("<td>" + status + "</td>");
+                    document.write("<td>" + gajiPokok + "</td>");
+                    document.write("<td>" + tunjanganJabatan + "</td>");
+                    document.write("<td>" + bpjs + "</td>");
+                    document.write("<td>" + tunjanganKeluarga + "</td>");
+                    document.write("<td>" + totalGaji + "</td>");
+                    document.write("</tr>");
+                </script>
+            </tbody>
+            <tfoot>
+                <script>
+                    document.write("<tr>");
+                        document.write("<th colspan=8>" + "Total Gaji" + "</th>");
+                        document.write("<th>" + totalGaji + "</th>");
+                    document.write("</tr>");
+                </script>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
