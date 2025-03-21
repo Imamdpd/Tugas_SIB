@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JS4 OOP</title>
+</head>
+<body>
+    <h2>Daftar Pelanggan yang Menyewa Kendaraan</h2>
+    <ul id="daftarPelanggan"></ul>
+
+    <script>
+        class Pelanggan {
+            constructor(nama, noTelepon) {
+                this.nama = nama;
+                this.noTelepon = noTelepon;
+                this.kendaraanDisewa = null;
+            }
+
+            sewaKendaraan(kendaraan) {
+                this.kendaraanDisewa = kendaraan;
+                daftarPelanggan.push(this);
+            }
+        }
+
+        let daftarPelanggan = [];
+
+        function tampilkanDaftarPelanggan() {
+            const listElement = document.getElementById("daftarPelanggan");
+            listElement.innerHTML = ""; // Menghapus isi sebelumnya
+
+            if (daftarPelanggan.length === 0) {
+                const noData = document.createElement("li");
+                noData.textContent = "Tidak ada pelanggan yang sedang menyewa kendaraan.";
+                listElement.appendChild(noData);
+            } else {
+                daftarPelanggan.forEach((pelanggan, index) => {
+                    const item = document.createElement("li");
+                    item.textContent = `${index + 1}. ${pelanggan.nama} - Kendaraan: ${pelanggan.kendaraanDisewa}`;
+                    listElement.appendChild(item);
+                });
+            }
+        }
+
+        let pelanggan1 = new Pelanggan('Budi', '085678901112');
+        let pelanggan2 = new Pelanggan('Agus', '081234567890');
+        let pelanggan3 = new Pelanggan('Rani', '081876543210');
+
+        pelanggan1.sewaKendaraan('Mobil');
+        pelanggan2.sewaKendaraan('Motor');
+        pelanggan3.sewaKendaraan('Mobil');
+
+        tampilkanDaftarPelanggan();
+    </script>
+</body>
+</html>
