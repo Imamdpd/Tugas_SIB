@@ -1,0 +1,28 @@
+import users from "./data.mjs";
+
+const index = () => {
+    console.log("Daftar Pengguna:")
+    users.forEach(({ nama, umur, alamat, email}) => {
+        console.log(`Nama: ${nama}, Umur: ${umur}, Alamat: ${alamat}, Email: ${email}`)
+    });
+        
+}
+
+const store = (NewDataUser) => {
+    users.push(NewDataUser)
+    console.log("Pengguna berhasil ditambahkan")
+
+}
+
+const destroy = (index) => {
+    if (index >= 0 && index < users.length) {
+        users.splice(index, 1)
+        console.log("Pengguna berhasil dihapus");
+    } else {
+        console.log("Index tidak valid");
+    }
+    
+
+}
+
+export {index, store, destroy}

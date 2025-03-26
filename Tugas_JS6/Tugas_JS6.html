@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Advanced 2</title>
+</head>
+<body>
+    <script type="module">
+        import {index,store, destroy} from "./controler.mjs"
+
+        const main = () => {
+            index()
+            console.log(" ");
+
+            store ({ nama:'Samuel', umur: 31, alamat: 'Bali', email: 'samuel177@gmail.com'})
+            store ({ nama: 'Michael', umur: 35, alamat: 'Surabaya', email: 'michael2023@gmail.com'});
+            console.log(" ")
+
+            index()
+            console.log(" ")
+
+            destroy(2)
+            console.log(" ")
+
+            index()
+        }
+
+        main()
+    </script>
+</body>
+</html>
