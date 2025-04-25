@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout dengan Frameset</title>
+</head>
+    <frameset rows="15%, 5%, 65%, 15%" border="1">
+    <!-- Header -->
+    <frame src="header.html" name="header" scrolling="no" noresize>
+    
+    <!-- Navigation Menu -->
+    <frame src="menu.html" name="menu" scrolling="no" noresize>
+    
+    <frameset cols="20%, 60%, 20%">
+        <!-- Left Content -->
+        <frame src="left.html" name="left" scrolling="auto" noresize>
+        <!-- Main Content -->
+        <frame src="home.html" name="main_content" scrolling="auto">
+        <!-- Right Content -->
+        <frame src="right.html" name="right" scrolling="auto" noresize>
+    </frameset>
+    
+    <!-- Footer -->
+    <frame src="footer.html" name="footer" scrolling="no" noresize>
+</frameset>
+</html>

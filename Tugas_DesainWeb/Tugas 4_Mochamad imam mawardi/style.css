@@ -1,0 +1,151 @@
+/* Dasar Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana,sans-serif;
+    text-align: center;
+    background: pink;
+    color: #333;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: rgb(55, 0, 255);
+    border: 2px solid #4400ff;
+    border-radius: 8px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #00bcd4, #009688);
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    margin-top: 20;
+}
+
+
+
+/* Fieldset */
+fieldset {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+legend {
+    font-weight: bold;
+    color: black;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 10px 0;
+}
+a {
+    text-decoration: none;
+    color: #1900ff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Home Page */
+
+h2 {
+    color: #007bff;
+    text-align: center;
+    font-weight: bold;
+}
+li {
+    background: #007bff;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s;
+}
+li a {
+    color: white;
+    font-weight: bold;
+}
+li:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Gallery Page */
+.gallery-container {
+    text-align: center;
+    padding: 30px;
+}
+marquee {
+    width: 100%;
+    padding: 10px 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+img {
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid #007bff;
+    transition: transform 0.3s;
+}
+img:hover {
+    transform: scale(1.1);
+    border-color: #0056b3;
+}
+
+/* Study Page */
+.study-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+th {
+    background: #0051ff;
+    color: white;
+}
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+tr:hover {
+    background: rgba(0, 123, 255, 0.1);
+    transform: scale(1.01);
+}
